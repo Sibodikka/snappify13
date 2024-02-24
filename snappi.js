@@ -110,4 +110,4 @@ const prepareURL = (path) => {
   return path
 }
 
-module.exports = Snappi
+module.exports = Snappify13
