@@ -1,20 +1,27 @@
 # snappify13
 
-Snappify13
-A simple web framework that is simple and aims to be fast
+# Snappify13
 
-Supports async/await and ES6 features
+A simple web framework that is simple and aims to be _fast_
 
-Goals
-Stay updated with latest JS features
-Always improving performance
-Add useful features that aren't expensive
-Routing explanation
-Snappi has a very simple routing pipe just like popular frameworks, ie: express
+**Supports**
+async/await and ES6 features
 
-use -> route handlers
+## Goals
 
-Example
+- Stay updated with latest JS features
+- **Always** improving performance
+- Add useful features that aren't _expensive_
+
+## Routing explanation
+
+Snappi has a very _simple_ routing pipe just like popular frameworks, ie: express
+
+`use` -> `route handlers`
+
+### Example
+
+```js
 const Snappi = require("Snappi");
 
 const server = new Snappi();
@@ -36,13 +43,17 @@ server.route("GET", "/", (req, res) => {
 });
 
 server.listen(80);
+```
+
 Both async and regular functions work, so do (req, res, next) for some express plugin/middleware support
 
-Additional features
+## Additional features
+
 Visit /tests/ to see additional tests
 
 You're able to chain functions or pass objects to a route
 
+```js
 server.route(
   "GET",
   "/",
@@ -55,8 +66,4 @@ server.route(
     //chaining works as such
   }
 );
-  path = path.split('/')
-  return path
-}
-
-module.exports = Snappi
+```
